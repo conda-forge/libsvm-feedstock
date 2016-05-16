@@ -5,7 +5,7 @@ Home: https://github.com/cjlin1/libsvm
 
 Package license: Modified BSD License (3-clause)
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A simple, easy-to-use, and efficient software for SVM classification and regression.
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libsvm-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/libsvm-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/libsvm-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libsvm-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libsvm-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libsvm-feedstock/branch/master)
