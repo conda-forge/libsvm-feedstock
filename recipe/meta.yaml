@@ -30,8 +30,10 @@ test:
 
   commands:
     - test -e $PREFIX/include/svm.h                           # [unix]
-    - test -e $PREFIX/lib/libsvm.so                           # [unix]
-    - test -e $PREFIX/lib/libsvm.so.2                         # [unix]
+    - test -e $PREFIX/lib/libsvm.so                           # [linux]
+    - test -e $PREFIX/lib/libsvm.so.2                         # [linux]
+    - test -e $PREFIX/lib/libsvm.dylib                        # [osx]
+    - test -e $PREFIX/lib/libsvm.2.dylib                      # [osx]
     - svm-train | grep 'Usage'                                # [unix]
     - svm-scale | grep 'Usage'                                # [unix]
     - svm-predict | grep 'Usage'                              # [unix]
