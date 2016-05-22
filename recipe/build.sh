@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ `uname` == 'Darwin' ]]; then
-	sed -i 's/-soname/-install_name/g' Makefile
-	sed -i 's/libsvm.so.$(SHVER)/libsvm.$(SHVER).dylib/g' Makefile
+	sed -i '' 's/-soname/-install_name/g' Makefile
+	sed -i '' 's/libsvm.so.$(SHVER)/libsvm.$(SHVER).dylib/g' Makefile
 fi
 make all
 make lib
