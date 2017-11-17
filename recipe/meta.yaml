@@ -44,7 +44,8 @@ test:
 
 about:
   home: https://github.com/cjlin1/libsvm
-  license: Modified BSD License (3-clause)
+  license: BSD 3-clause
+  license_file: COPYRIGHT
   summary: A simple, easy-to-use, and efficient software for SVM classification and regression.
 
 extra:
