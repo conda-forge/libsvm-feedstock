@@ -1,4 +1,4 @@
-{% set version = "3.21" %}
+{% set version = "323" %}
 {% set flatversion = version.replace(".", "") %}
 
 package:
@@ -8,13 +8,13 @@ package:
 source:
   fn: libsvm-{{ flatversion }}.tar.gz
   url: https://github.com/cjlin1/libsvm/archive/v{{ flatversion }}.tar.gz
-  md5: acff2c058b7cb38a135fa5d0b4f39e43
+  md5: 5c38bb106963530e052de253f1753223
 
   patches:
     - win32.patch  # [win32]
 
 build:
-  number: 1
+  number: 0
   features:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
