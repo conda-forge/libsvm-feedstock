@@ -14,14 +14,16 @@ Summary: A simple, easy-to-use, and efficient software for SVM classification an
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libsvm-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libsvm-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libsvm-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libsvm-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libsvm-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libsvm-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libsvm-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libsvm-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libsvm-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libsvm-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/libsvm-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/libsvm-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libsvm/badges/version.svg)](https://anaconda.org/conda-forge/libsvm)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libsvm/badges/downloads.svg)](https://anaconda.org/conda-forge/libsvm)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libsvm-green.svg)](https://anaconda.org/conda-forge/libsvm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libsvm.svg)](https://anaconda.org/conda-forge/libsvm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libsvm.svg)](https://anaconda.org/conda-forge/libsvm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libsvm.svg)](https://anaconda.org/conda-forge/libsvm) |
 
 Installing libsvm
 =================
