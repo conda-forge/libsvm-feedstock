@@ -6,28 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  fn: libsvm-{{ flatversion }}.tar.gz
   url: https://github.com/cjlin1/libsvm/archive/v{{ flatversion }}.tar.gz
-  md5: 5c38bb106963530e052de253f1753223
+  sha256: 7a466f90f327a98f8ed1cb217570547bcb00077933d1619f3cb9e73518f38196
 
   patches:
     - win32.patch  # [win32]
 
 build:
-  number: 0
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py35]
+  number: 1
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - python  # [win]
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}                    # [win]
-
   commands:
     - test -e $PREFIX/include/svm.h                           # [unix]
     - test -e $PREFIX/lib/libsvm.so                           # [linux]
@@ -44,7 +38,7 @@ test:
 
 about:
   home: https://github.com/cjlin1/libsvm
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_file: COPYRIGHT
   summary: A simple, easy-to-use, and efficient software for SVM classification and regression.
 
