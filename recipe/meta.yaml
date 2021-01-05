@@ -31,9 +31,9 @@ test:
     - svm-train | grep 'Usage'                                # [unix]
     - svm-scale | grep 'Usage'                                # [unix]
     - svm-predict | grep 'Usage'                              # [unix]
-    - svm-train | find "Usage"                                # [win]
-    - svm-scale | find "Usage"                                # [win]
-    - svm-predict | find "Usage"                              # [win]
+    - svm-train | findstr "Usage"                             # [win]
+    - svm-scale | findstr "Usage"                             # [win]
+    - svm-predict | findstr "Usage"                           # [win]
     - if not exist %PREFIX%\\Library\\lib\\libsvm.dll exit 1  # [win]
 
 about:
