@@ -13,7 +13,7 @@ source:
     - win32.patch  # [win32]
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: libsvm
