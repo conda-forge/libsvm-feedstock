@@ -82,6 +82,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libsvm-green.svg)](https://anaconda.org/conda-forge/libsvm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libsvm.svg)](https://anaconda.org/conda-forge/libsvm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libsvm.svg)](https://anaconda.org/conda-forge/libsvm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libsvm.svg)](https://anaconda.org/conda-forge/libsvm) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libsvm--official-green.svg)](https://anaconda.org/conda-forge/libsvm-official) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libsvm-official.svg)](https://anaconda.org/conda-forge/libsvm-official) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libsvm-official.svg)](https://anaconda.org/conda-forge/libsvm-official) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libsvm-official.svg)](https://anaconda.org/conda-forge/libsvm-official) |
 
 Installing libsvm
 =================
@@ -93,16 +94,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libsvm` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `libsvm, libsvm-official` can be installed with `conda`:
 
 ```
-conda install libsvm
+conda install libsvm libsvm-official
 ```
 
 or with `mamba`:
 
 ```
-mamba install libsvm
+mamba install libsvm libsvm-official
 ```
 
 It is possible to list all of the versions of `libsvm` available on your platform with `conda`:
