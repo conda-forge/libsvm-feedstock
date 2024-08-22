@@ -44,6 +44,7 @@ outputs:
     build:
       noarch: python
       script: cd python; python -m pip install --no-deps --ignore-installed .
+      skip: True  # [not linux]
     requirements:
       host:
         - {{ pin_subpackage('libsvm', max_pin="x.x.x") }}
