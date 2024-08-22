@@ -1,0 +1,35 @@
+diff --git a/python/setup.py b/python/setup.py
+index 4cdd842..8aedef0 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -89,8 +89,8 @@ class CleanCommand(clean_cmd):
+                 rmtree(f)
+ 
+ def main():
+-    if not path.exists(cpp_dir):
+-        create_cpp_source()
++    # if not path.exists(cpp_dir):
++    #     create_cpp_source()
+ 
+     if not path.exists(license_file):
+         copyfile(license_source, license_file)
+@@ -110,14 +110,13 @@ def main():
+         url="https://www.csie.ntu.edu.tw/~cjlin/libsvm",
+         license=license_name,
+         install_requires=["scipy"],
+-        ext_modules=[
+-            Extension(
+-                "{}.{}".format(PACKAGE_DIR, dynamic_lib_name), **kwargs_for_extension
+-            )
+-        ],
++        # ext_modules=[
++        #     Extension(
++        #         "{}.{}".format(PACKAGE_DIR, dynamic_lib_name), **kwargs_for_extension
++        #     )
++        # ],
+         cmdclass={"clean": CleanCommand},
+     )
+ 
+ 
+ main()
+-
