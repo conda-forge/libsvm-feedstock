@@ -15,27 +15,50 @@ source:
 build:
   number: 0
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-    - {{ compiler('cxx') }}
-    - make
-
-test:
-  commands:
-    - test -e $PREFIX/include/svm.h                           # [unix]
-    - test -e $PREFIX/lib/libsvm.so                           # [linux]
-    - test -e $PREFIX/lib/libsvm.so.3                         # [linux]
-    - test -e $PREFIX/lib/libsvm.dylib                        # [osx]
-    - test -e $PREFIX/lib/libsvm.3.dylib                      # [osx]
-    - svm-train | grep 'Usage'                                # [unix]
-    - svm-scale | grep 'Usage'                                # [unix]
-    - svm-predict | grep 'Usage'                              # [unix]
-    - svm-train | findstr "Usage"                             # [win]
-    - svm-scale | findstr "Usage"                             # [win]
-    - svm-predict | findstr "Usage"                           # [win]
-    - if not exist %PREFIX%\\Library\\lib\\libsvm.dll exit 1  # [win]
+outputs:
+  - name: libsvm
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+        - {{ compiler('cxx') }}
+        - make
+    test:
+      commands:
+        - test -e $PREFIX/include/svm.h                           # [unix]
+        - test -e $PREFIX/lib/libsvm.so                           # [linux]
+        - test -e $PREFIX/lib/libsvm.so.3                         # [linux]
+        - test -e $PREFIX/lib/libsvm.dylib                        # [osx]
+        - test -e $PREFIX/lib/libsvm.3.dylib                      # [osx]
+        - svm-train | grep 'Usage'                                # [unix]
+        - svm-scale | grep 'Usage'                                # [unix]
+        - svm-predict | grep 'Usage'                              # [unix]
+        - svm-train | findstr "Usage"                             # [win]
+        - svm-scale | findstr "Usage"                             # [win]
+        - svm-predict | findstr "Usage"                           # [win]
+        - if not exist %PREFIX%\\Library\\lib\\libsvm.dll exit 1  # [win]
+  - name: libsvm-official
+    build:
+      noarch: python
+      script: cd python; python -m pip install --no-deps --ignore-installed .
+    requirements:
+      host:
+        - {{ pin_subpackage('libsvm', max_pin="x") }}
+        - pip
+        - python
+      run:
+        - {{ pin_subpackage('libsvm', max_pin="x") }}
+        - python
+        - scipy
+    test:
+      imports:
+        - libsvm
+        - libsvm.svm
+        - libsvm.svmutil
+      commands:
+        - pip check
+      requires:
+        - pip
 
 about:
   home: https://github.com/cjlin1/libsvm
