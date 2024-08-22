@@ -46,11 +46,11 @@ outputs:
       script: cd python; python -m pip install --no-deps --ignore-installed .
     requirements:
       host:
-        - {{ pin_subpackage('libsvm', max_pin="x") }}
+        - {{ pin_subpackage('libsvm', max_pin="x.x.x") }}
         - pip
         - python
       run:
-        - {{ pin_subpackage('libsvm', max_pin="x") }}
+        - {{ pin_subpackage('libsvm', max_pin="x.x.x") }}
         - python
         - scipy
     test:
