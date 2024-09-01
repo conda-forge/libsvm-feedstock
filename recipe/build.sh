@@ -15,9 +15,9 @@ install -m755 svm-train $PREFIX/bin/
 install -m755 svm-scale $PREFIX/bin/
 install -m755 svm-predict $PREFIX/bin/
 if [[ `uname` == 'Darwin' ]]; then
-	install -m644 libsvm.3.dylib $PREFIX/lib/
-	ln -s libsvm.3.dylib $PREFIX/lib/libsvm.dylib
+	install -m644 libsvm.4.dylib $PREFIX/lib/
+	ln -s libsvm.4.dylib $PREFIX/lib/libsvm.dylib
 else
-	install -m644 libsvm.so.3 $PREFIX/lib/
-	ln -s libsvm.so.3 $PREFIX/lib/libsvm.so
+	install -m644 libsvm.so.4 $PREFIX/lib/
+	ln -s libsvm.so.4 $PREFIX/lib/libsvm.so
 fi
