@@ -1,4 +1,4 @@
-{% set version = "334" %}
+{% set version = "335" %}
 {% set flatversion = version.replace(".", "") %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/cjlin1/libsvm/archive/v{{ flatversion }}.tar.gz
-  sha256: 3ecbf010c0b8f3bb44d6f359884b726ff30540fee9633242ede49d4dbfd7e93e
+  sha256: f864faaf0e6606aa5eb89b48d76b77db43b501c3b0b1842ae036f9d754e675d9
 
   patches:
     - win32.patch  # [win32]
