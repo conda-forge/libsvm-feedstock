@@ -15,7 +15,7 @@ source:
 build:
   number: 1
   run_exports:
-    - libsvm >=334,<400
+    - libsvm >={{ version }},<400
 
 requirements:
   build:
