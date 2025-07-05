@@ -199,5 +199,6 @@ Feedstock Maintainers
 
 * [@183amir](https://github.com/183amir/)
 * [@bkpoon](https://github.com/bkpoon/)
+* [@jpfeuffer](https://github.com/jpfeuffer/)
 * [@patricksnape](https://github.com/patricksnape/)
 
