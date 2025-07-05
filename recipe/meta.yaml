@@ -37,7 +37,7 @@ test:
     - svm-train | findstr "Usage"                             # [win]
     - svm-scale | findstr "Usage"                             # [win]
     - svm-predict | findstr "Usage"                           # [win]
-    - if not exist %PREFIX%\\Library\\lib\\libsvm.dll exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\bin\\libsvm.dll exit 1  # [win]
 
 about:
   home: https://github.com/cjlin1/libsvm
