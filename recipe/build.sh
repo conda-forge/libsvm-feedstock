@@ -3,6 +3,7 @@
 if [[ `uname` == 'Darwin' ]]; then
 	sed -i '' 's/-soname/-install_name/g' Makefile
 	sed -i '' 's/libsvm.so.$(SHVER)/libsvm.$(SHVER).dylib/g' Makefile
+	sed -i '' '/^\tSHARED_LIB_FLAG = -dynamiclib/ s/$/ -headerpad_max_install_names/' Makefile
 fi
 make all
 make lib
